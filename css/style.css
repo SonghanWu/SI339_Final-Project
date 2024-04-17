@@ -1,0 +1,147 @@
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 5px;
+    background: white;
+    color: black;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+#mainpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.link-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 90%;
+    justify-content: space-around;
+}
+
+.link-box {
+    width: 3vw;
+    height: 3vw;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-box:nth-child(1) { background-color: #FFD700; } /* Gold */
+.link-box:nth-child(2) { background-color: #4682B4; } /* SteelBlue */
+.link-box:nth-child(3) { background-color: #32CD32; } /* LimeGreen */
+.link-box:nth-child(4) { background-color: #FF6347; } /* Tomato */
+.link-box:nth-child(5) { background-color: #6A5ACD; } /* SlateBlue */
+
+.link-container a {
+    text-align: center;
+    opacity: 0;
+    font-family: "Gill Sans";
+    color: black;
+    font-size: 0.6rem;
+    transition: opacity 0.1s ease;
+    text-decoration: none;
+}
+  
+.link-box:hover a {
+    opacity: 1;
+}
+
+.link-box:hover {
+    width: 60px;
+    height: 60px;
+}
+.link-box:nth-child(3):hover {
+    width: 78px;
+    height: 78px;
+}
+
+h1 {
+    font-family: Georgia;
+    font-size: 5rem;
+}
+
+#name {
+    margin-left: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#tagline {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 90%;
+    text-align: center;
+}
+
+#discription {
+    font-family: "Garamond";
+}
+
+
+/* Seismic House Page */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px;
+    padding: 5px;
+}
+
+.grid-item {
+    width: 100%;
+}
+
+.title {
+    left: 20px;
+}
+
+.description {
+    font-family: Arial, sans-serif; /* 使用无衬线字体提高可读性 */
+    font-size: 0.5px; /* 适中的字体大小，适合阅读 */
+    color: #666; /* 较深的灰色，减少对视觉的冲击 */
+    line-height: 1.6; /* 增加行间距，提高文本的可读性 */
+    max-width: 600px; /* 限制最大宽度，使文本更易于阅读 */
+    margin: 20px auto; /* 居中显示并添加外边距 */
+    padding: 10px; /* 增加内边距 */
+}
+
+@media screen and (min-width: 540px) {
+    .link-box {
+        width: 3vw;
+        height: 3vw;
+    }
+
+    .link-box:hover {
+        width: 8vw;
+        height: 8vw;
+    }
+    .link-box:nth-child(3):hover {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .link-container {
+        width: 70%;
+    }
+
+    .link-container a {
+        font-size: 0.8em;
+    }
+
+    #name {
+        margin-left: 0px;
+        margin-top: none;
+        margin-bottom: none;
+    }
+}
