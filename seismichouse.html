@@ -4,14 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/html5reset.css">
+    <link href="/lightbox2-2.11.4/dist/css/lightbox.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+15+Charted&display=swap" rel="stylesheet">
 
     <title>Anti-Seismic House</title>
 </head>
-<body>
+<body class="body-seismichouse">
     <header>
-        <a href = "#main" class = "skip-link">Skip to Main Content</a>
-        <div class="title"><h1>Anti-Seismic House</h1></div>
+        <a href="#main" class="skip-link">Skip to Main Content</a>
+        <div class="link-container" style="margin-top: 15px">
+            <div class="link-box"><a href="seismichouse.html">ANTI SEISMIC HOUSE</a></div>
+            <div class="link-box"><a href="powerdiabolo.html">DIABOLO POWER BANK</a></div>
+            <div class="link-box"><a href="multifuncclassroom.html">MULTI FUNCTION CLASSROOM</a></div>
+            <div class="link-box"><a href="photography.html">MY PHOTO- GRAPHY</a></div>
+            <div class="link-box"><a href="index.html">BACK TO MAIN</a></div>
+        </div>
+
+        <h1 class="title">Anti-Seismic House</h1>
         <ul>
             <li>Creativity, Physics, Machinery, Programming, Mechanics</li>
             <li>Type: Individual</li>
@@ -19,21 +32,100 @@
             <li>Application in Sketch, Handmade, LEGO MINDSTORMS</li>
         </ul>
     </header>
-    <main>
+    <main id="main">
         <div class="grid-container">
             <div class="grid-item">
-                <img src="images/Potential-Seismic-Source-Zones-of-China-and-its-Neighboring-Regions-and-historical.png" width="200" alt="">
+                <img src="images/Potential-Seismic-Source-Zones-of-China-and-its-Neighboring-Regions-and-historical.png" width=80% alt="">
             </div>
             <div class="grid-item">
-                <div class="discription">China is located in the Pacific Rim seismic belt, a region with frequent earthquake disasters. The most recent major earthquake occurred in Wenchuan in 2008. Accord- ing to data from the China Earthquake Administration, the surface wave magnitude of the 5.12 Wenchuan earthquake was 8.0. The earthquake affected most of China and many countries and regions in Asia. The earthquake was felt in China from Inner Mongolia in the north, to Shanghai in the east, Tibet in the west, and Hong Kong and Taiwan in the south. Countries such as Thailand, Vietnam, the Philippines, and Japan outside of China also felt the tremor. The Wenchuan earthquake caused huge losses to life and property.</div>
+                <div class="description">China is located in the Pacific Rim seismic belt, a region with frequent earthquake disasters. The most recent major earthquake occurred in Wenchuan in 2008. According to data from the China Earthquake Administration, the surface wave magnitude of the 5.12 Wenchuan earthquake was 8.0. The earthquake was felt in China from Inner Mongolia in the north, to Shanghai in the east, Tibet in the west, and Hong Kong and Taiwan in the south. Countries such as Thailand, Vietnam, the Philippines, and Japan outside of China also felt the tremor. The Wenchuan earthquake caused huge losses to life and property.</div>
             </div>
-            <div class="grid-item">Machinery</div>
-            <div class="grid-item">Programming</div>
-            <div class="grid-item">Mechanics</div>
-            <div class="grid-item">Type: Individual</div>
-            <div class="grid-item">Time: 2016 - 2021</div>
-            <div class="grid-item">Application in: Sketch, Handmade, LEGO MINDSTORMS</div>
+            <div class="grid-item">
+                <div class="description">When I was in elementary school in 2016, I had the idea of building an anti-seismic house. Since my understanding of materials and engineering at the time were not mature enough, this design was very straightforward. These structures could to a large extent ensure that people have a safe shelter in the event of an earthquake, but when I think about it carefully, there are also many problems.
+                                         When I searched for information on the Internet, I learned many common methods for earthquake resistance in houses, including how the furniture will not fall down in the event of an earthquake, and how the metal desks in schools protect students. So, I combined these ideas and came up with a new one: to design anti-seismic furniture to protect people.</div>
+            </div>
+            <div class="grid-item">
+                <div class="img-container"><img src="images/presentation_photo.jpg" width=100% alt=""></div>
+            </div>
+            <p id="somethingmore" class="full-width">Of course, there are a lot more things I've done at that time :) </p>
+            
+            <section class="modal hidden full-width">
+                <button class="btn btn-close">⨉</button>
+                <div class="photo-gallery">
+                    <img src="images/illustration1.jpg" width=80% alt="">
+                    <img src="images/illustration2.jpg" width=80% alt="">
+                </div>
+                <div class="description">This design uses the basement space to install anti-seismic de- vices. When an earthquake occurs, with a button pressed, part of the floor can be lifted automatically to form a stable triangular structure with the load-bearing wall. People can hide in this tri- angular safety zone. The second anti-seismic device is “Optimus Prime.” After it is activated, “Optimus Prime” rises to the roof and prevents it from collapsing. The entire design forms a dou- ble-protection structure. I simulated the experimental scene with Lego mechanical components.</div>
+            </section>
+            <div class="overlay hidden"></div>
+            <button class="btn btn-open">LEARN MORE ABOUT DESIGN</button>
+            <section class="modal hidden full-width">
+                <button class="btn btn-close">⨉</button>
+                <div class="photo-gallery">
+                    <img src="images/code_snippet.jpg" width=80% alt="">
+                </div>
+                <div class="description">In this earthquake-resistant house, the entry is controlled by a color sensor that activates a small motor to open the door when it detects red, pausing briefly to allow entry before closing. An alarm, triggered by the master controller's right button, sounds until the sensor detects red again, indicating safe evacuation. Safety features include a floor that elevates into a safety triangle by motor B and an X-shaped structure "Optimus Prime" lifted by motor C, both activated and later reset by respective touch sensors. The system resets itself by reversing the motors once the sensors are pressed again, allowing exit and stopping the alarm once safety is confirmed by the sensor detecting red.</div>
+            </section>
+            <div class="overlay hidden"></div>
+            <button class="btn btn-open">LEARN MORE ABOUT CODE</button>
+        </div>
+        <div class="grid-item">
+            <div class="photo-gallery_plus">
+                <figure><a href="images/p1.jpg" data-lightbox="whole-view" data-title="Regular mode (with beddings)" alt="">
+                    <img src="images/p1.jpg" alt="p1"></a>
+                    <figcaption>1. In most cases, it can be used as a bed.</figcaption></figure>
+                <figure><a href="images/p2.jpg" data-lightbox="whole-view" data-title="Regular mode (without beddings)" alt="">
+                    <img src="images/p2.jpg" alt="p2"></a>
+                    <figcaption>2. The bottom surfaces of the five triangular prisms are horizontally joined together and form the bed board, and the last prism is used as the bed backrest. Each prism is fixed on its position with the arbitrary pause damping hinges to connect its bottom surfaces.</figcaption></figure>
+                <figure><a href="images/p3.jpg" data-lightbox="little-drawer" data-title="A little hole on the backboard that can be used to open the storage besides it" alt="">
+                    <img src="images/p3.jpg" alt="p3"></a>
+                    <figcaption>3. The cover board of the bed has a clasp.</figcaption></figure>
+                <figure><a href="images/p4.jpg" data-lightbox="little-drawer" data-title="The storage hidden in the backboard" alt="">
+                    <img src="images/p4.jpg" alt="p4"></a>
+                    <figcaption>4. Emergency supplies can be stored in the box at the head of the bed.</figcaption></figure>
+                <figure><a href="images/p5.jpg" data-lightbox="whole-view" data-title="Protection mode" alt="">
+                    <img src="images/p5.jpg" alt="p5"></a>
+                    <figcaption>5. When an earthquake occurs, the bed can be folded into a stable hexagonal structure. The two waists of the two triangular surfaces of the prisms are designed with magnetic iron rods, in which their magnetic poles are alternately N, S, N, S, N, etc., so that the two adjacent triangles can be attached quickly, fastening up the whole deformation process.</figcaption></figure>
+                <figure><a href="images/p6.jpg" data-lightbox="whole-view" data-title="Protection mode with human inside (for simulation)" alt="">
+                    <img src="images/p6.jpg" alt="p6"></a>
+                    <figcaption>6. People can dive into it to avoid being hurt from falling objects during earthquakes.</figcaption></figure>
+            </div>
+        </div>
+        <div class="grid-container">
+            <div class="grid-item full-width grid-item_left">
+                <h2 class="medium-title">But ... Why Polygon?</h2>
+            </div>
+            <div class="grid-item">
+                <div class="description">What I envisioned at the beginning was a bed composed of three individual triangular prisms, which can be joined together to form a bigger one <b>(See this design by clicking the right(below) image)</b>. The triangular prism is preferably an isosceles triangle with a long waist and a short base. In this way, the highest place can bear the greatest force thus protecting people hiding at the bottom. If the two end points of each side of the polygon are connected to its center, many triangles can still be formed, and the principle remains the same. Therefore, I assume that when the height of this polygon (the vertical distance from the center of the
+                                         polygon to the sides) is constant, through calculation we will have a formula: <b>perimeter = (2 • Height • Number of sides)/(tan(90°(Number of sides-2)/Number of sides))</b>. In this formula, under the assumption that the height is 0.8 meters, the perimeter will decrease as the number of sides increases.
+                                         As the polygon more resembles a circle, its motion becomes more flexible. Finally, after synthesizing various factors, I determined to build with the hexagonal structure. When an earthquake occurs, if a heavy object from an uncertain direction hits the polygon, it can move accordingly, canceling out the force.</div>
+            </div>
+            <div class="grid-item">
+                <img id="toggleImage" class="img-container" src="images/triangle1.jpg" alt="">
+            </div>
+            <div class="grid-item">
+                <div class="description">How to start?
+                                         <br>1. We can deform our anti-seismic bed manually: first put the whole bed upright and then roll it into a polygonal shape, and then put the whole bed back flat, and people get into the polygon for protection.
+                                         <br>2. A gear is placed on one end of the edge on each triangular prism's bottom surface, so that the edge can rotate when the gear rotates. Only one motor is required to drive one of the gears, and then all gears can rotate. In this case, all edges rotate, and our bed is rolled up, completing the deformation. One detail that requires attention is that three gears are required between every two nodes, so that they can rotate in the same direction.</div>
+            </div>
+            <div class="grid-item">
+                <figure class="img-container"><a href="images/real-life1.jpg" data-lightbox="whole-view" data-title="Real-life scenario" alt="">
+                    <img src="images/real-life1.jpg" width=100% alt="real-life1"></a>
+                    <figcaption style="text-align: right;">Real-life scenario</figcaption></figure>
+            </div>
+            <div class="grid-item full-width grid-item_left" style="margin-bottom: 5px;">
+                <h2 class="medium-title">Final Model</h2>
+            </div>
+            <div class="final_model_container full-width">
+                <p class="description" style="min-width: 285px;">&darr; Use this sliding block to see its regular(life) mode &darr;</p>
+                <label for="imageSlider">111</label>
+                <input style="width: 60%" type="range" id="imageSlider" min="0" max="100" value="0">
+                <img src="images/model2.jpg" id="image2" alt="">
+                <img src="images/model1.jpg" id="image1" style="opacity: 0;" alt="">
+            </div>
         </div>
     </main>
+    <script src="/lightbox2-2.11.4/dist/js/lightbox-plus-jquery.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

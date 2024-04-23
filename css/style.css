@@ -12,7 +12,7 @@
     top: 10px;
 }
 
-#mainpage {
+#mainpage main {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,12 +26,13 @@
     flex-wrap: nowrap;
     width: 90%;
     justify-content: space-around;
+    margin: 0 auto;
 }
 
 .link-box {
     width: 3vw;
     height: 3vw;
-    color: black;
+    color: black; /* default color */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +72,7 @@ h1 {
     font-size: 5rem;
 }
 
-#name {
+.title {
     margin-left: 15px;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -85,38 +86,234 @@ h1 {
     text-align: center;
 }
 
-#discription {
+#main_description {
     font-family: "Garamond";
+    font-size: 1.5rem;
 }
 
 
 /* Seismic House Page */
+.body-seismichouse {
+    background-image: url('/images/beforeafter-neighborhood_before.jpg');
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #f8f8f8; /* default view */
+}
+
+.body-seismichouse::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+	z-index: -1;
+}
+
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr;
     gap: 5px;
     padding: 5px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .grid-item {
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container {
+    border: 0.5px solid black;
+    width: 80%;
+    padding: 5px;
 }
 
 .title {
-    left: 20px;
+    left: 30px;
 }
 
 .description {
-    font-family: Arial, sans-serif; /* 使用无衬线字体提高可读性 */
-    font-size: 0.5px; /* 适中的字体大小，适合阅读 */
-    color: #666; /* 较深的灰色，减少对视觉的冲击 */
-    line-height: 1.6; /* 增加行间距，提高文本的可读性 */
-    max-width: 600px; /* 限制最大宽度，使文本更易于阅读 */
-    margin: 20px auto; /* 居中显示并添加外边距 */
-    padding: 10px; /* 增加内边距 */
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #666;
+    line-height: 1.6; /* line spacing */
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 5px;
+
+    border: 1px solid #e0e0e0; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
 }
 
-@media screen and (min-width: 540px) {
+#somethingmore {
+    font-family: "Jersey 15 Charted", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* modal box */
+.full-width { /* don't know why but this is not working */
+    grid-column: 1 / -1;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.4rem;
+    padding: 0.4rem;
+
+    position: fixed;
+    top: 10%;
+    bottom: 10%;
+    left: 3%;
+    right: 3%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    z-index: 10;
+    overflow-y: auto; /* allow scroll bar when content exceeds the container */
+    /* min-height: 400px; */ /* will influence the other properties */
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.4rem;
+    font-weight: 700;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1em;
+}
+
+.btn-close {
+    transform: translate(42vw, 0.9vw); /* could be better */
+    font-size: 0.5em;
+    padding: 0.2rem 0.2rem;
+    background: #eee;
+    border-radius: 50%;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 2;
+}
+
+.modal {
+    z-index: 3;
+}
+
+.hidden {
+    display: none;
+}
+
+.photo-gallery_plus {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    width: 90%;
+}
+
+.photo-gallery_plus img {
+    width: 100%;
+}
+
+figcaption {
+    color: #666;
+    font-size: 0.5em;
+    text-align: center;
+}
+
+.medium-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.grid-item_left {
+    justify-content: left;
+}
+
+.final_model_container {
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+}
+
+.final_model_container img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 75px;
+    border: 2px solid goldenrod;
+}
+
+/* to make the sliding block fancier*/
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #ddd;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+input[type="range"]:hover,
+input[type="range"]:focus {
+    opacity: 1;
+}
+
+label {
+    position: absolute;
+    opacity: 0;
+    top: 0px;
+    left: 0px;
+}
+
+
+@media screen and (min-width: 720px) {
     .link-box {
         width: 3vw;
         height: 3vw;
@@ -143,5 +340,13 @@ h1 {
         margin-left: 0px;
         margin-top: none;
         margin-bottom: none;
+    }
+
+    .grid-container {
+        grid-template-columns: auto auto;
+    }
+
+    .photo-gallery_plus {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

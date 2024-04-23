@@ -26,3 +26,40 @@ function lightenColor(rgb, factor) {
 
     return `rgb(${r}, ${g}, ${b})`;
 }
+
+
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const openModalBtn = document.querySelector(".btn-open");
+const closeModalBtn = document.querySelector(".btn-close");
+
+const openModal = function () {
+    modal.classList.remove("hidden");
+    overlay.classList.remove("hidden");
+};
+
+openModalBtn.addEventListener("click", openModal);
+
+const closeModal = function () {
+    modal.classList.add("hidden");
+    overlay.classList.add("hidden");
+};
+
+closeModalBtn.addEventListener("click", closeModal);
+  
+overlay.addEventListener("click", closeModal);
+
+
+document.getElementById('toggleImage').addEventListener('click', function() {
+    var img = document.getElementById('toggleImage');
+    if (img.src.includes('images/triangle1.jpg')) {
+        img.src = 'images/triangle2.jpg';
+    } else {
+        img.src = 'images/triangle1.jpg';
+    }
+});
+
+document.getElementById('imageSlider').addEventListener('input', function() {
+    var value = this.value;
+    document.getElementById('image1').style.opacity = value / 100;
+});
